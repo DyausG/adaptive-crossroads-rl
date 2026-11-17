@@ -4,7 +4,7 @@
 
 **Dyaus Ghangas · 102308054 · Reinforcement Learning - UCS760**
 
-[Project report](reports/final/Adaptive_Crossroads_Project_Report.pdf) · [Dataset and storage](DATASET.md) · [Reproduction guide](CONTRIBUTING.md) · [MIT license](LICENSE)
+[Project report](reports/final/Adaptive_Crossroads_Project_Report.pdf) · [Dataset and storage](DATASET.md) · [Reproduction guide](CONTRIBUTING.md)
 
 ![Actual synchronized simulation with emergency-aware DQN and rule-based preemption](docs/images/simulation.png)
 
@@ -73,7 +73,7 @@ vendor/sumo-rl/                          Pinned MIT upstream source and needed n
 docs/images/                            Actual application screenshot
 ```
 
-Runtime recordings under dated `results/ui_runs/` directories are ignored by Git. They are not benchmark evidence. Submission statistics and software verification are included under **`reports/final/`**.
+Runtime recordings under dated `results/ui_runs/` directories are ignored by Git. They are not benchmark evidence. Experiment statistics and software verification are included under **`reports/final/`**.
 
 ## Verification
 
@@ -90,11 +90,3 @@ Run from the repository root using the configured Python environment:
 Recorded local verification includes **300 pytest tests**, **22 final worker checks**, **24 full desktop checks** and **23 final layout checks**. The desktop checks use real Tk widgets and real SUMO workers, including both controllers reaching 1200 seconds, all four injection directions, pause/seek, Restart, Stop and startup cancellation. [Evidence](reports/final/verification/) is included. The Windows CI definition is supplied as [.github/ci-template.yml](.github/ci-template.yml); it is not active yet. To enable it, use GitHub's web editor to copy its content to `.github/workflows/ci.yml`, or push that path using credentials with workflow permission. No remote CI success is claimed before activation.
 
 To train or evaluate without replacing the supplied experiments, follow [CONTRIBUTING.md](CONTRIBUTING.md). A full fresh dependency installation is separate from verification using the existing tested environment.
-
-## Submission
-
-Submit the repository URL and [current PDF report](reports/final/Adaptive_Crossroads_Project_Report.pdf). The [submission guide](SUBMISSION.md) includes the exact files, local run commands and an optional ZIP package command. The report's editable Markdown source, metadata and independently verified statistics are beside the PDF.
-
-## Attribution and license
-
-The project is under [MIT](LICENSE). Dependency notices are retained at [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), including SUMO-RL's required [MIT notice](vendor/sumo-rl/LICENSE) for pinned revision `86f0fc41401eeca724b2e8878f5020dc6d70c9b4`. SUMO and installed packages retain their own terms. Citation metadata is in [CITATION.cff](CITATION.cff).

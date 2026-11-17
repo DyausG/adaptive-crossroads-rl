@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "controller": "emergency",
+  "model_seed": 2,
+  "split": "validation",
+  "episodes": 12,
+  "elapsed_seconds": 6.046367200000532,
+  "checkpoint": "models\\emergency_seed2\\final.zip",
+  "checkpoint_sha256": "21cbd464ef3f39f39bfa3a483d08bee251fc0e30a2746052320b4c2795f77766",
+  "sumo_seed_policy": "Fixed manifest seed per route, independent of model seed"
+}

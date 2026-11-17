@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "original_zip_preserved": true,
+  "original_zip_sha256": "99a9dd7fa36ca4e2158bad6257790f0d57f966e03bacaeee6b177ea10304a393",
+  "v1": {
+    "routes_hashed": 72,
+    "final_checkpoints_hashed": 6,
+    "recorded_frames_hashed": 72,
+    "matched_gif_frames": 36,
+    "pdf_pages": 8,
+    "offline_passage_seconds": 174.0
+  },
+  "v2": {
+    "routes_hashed": 96,
+    "final_checkpoints_hashed": 6,
+    "recorded_frames_hashed": 72,
+    "matched_gif_frames": 36,
+    "pdf_pages": 8,
+    "offline_passage_seconds": 28.0
+  },
+  "offline_replay": true,
+  "network_connect_attempts": 0,
+  "elapsed_seconds": 10.762469699999201
+}

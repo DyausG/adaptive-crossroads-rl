@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "controller": "standard",
+  "model_seed": 2,
+  "split": "test",
+  "episodes": 24,
+  "elapsed_seconds": 12.428206699998555,
+  "checkpoint": "models\\standard_seed2\\final.zip",
+  "checkpoint_sha256": "9428ad17b2ddd71bcadffb3200a810e525c7eee3821201c7530d0b4edecc6a07",
+  "sumo_seed_policy": "Fixed manifest seed per route, independent of model seed"
+}

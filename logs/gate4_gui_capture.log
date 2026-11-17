@@ -1,0 +1,7 @@
+Step #0.00 (0ms ?*RT. ?UPS, TraCI: 4ms, vehicles TOT 0 ACT 0 BUF 0)                      
+
+ Retrying in 1 seconds
+{"controller": "rule", "frames": 36, "headless_match": true, "passage_seconds": 117.0}
+Step #0.00 (0ms ?*RT. ?UPS, TraCI: 6ms, vehicles TOT 0 ACT 0 BUF 0)                      
+
+{"controller": "emergency", "frames": 36, "headless_match": true, "passage_seconds": 174.0}

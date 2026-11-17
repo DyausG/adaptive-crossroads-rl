@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "experiment_id": "v2",
+  "command": "python app.py --experiment v2 --smoke-live",
+  "controller": "emergency",
+  "model_seed": 0,
+  "scenario": "scenario_30002_emergency",
+  "canvas_time": 275,
+  "vehicles_rendered": 123,
+  "screenshot": "experiments/v2/main/demo/launcher_live.png"
+}

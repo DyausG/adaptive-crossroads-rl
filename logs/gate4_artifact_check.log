@@ -1,0 +1,13 @@
+Using libsumo as traci as requested by environment variable.
+{
+  "pass": true,
+  "routes_hashed": 72,
+  "final_checkpoints_hashed": 6,
+  "recorded_frames_hashed": 72,
+  "matched_gif_frames": 36,
+  "pdf_pages": 8,
+  "offline_replay": true,
+  "network_connect_attempts": 0,
+  "offline_passage_seconds": 174.0,
+  "elapsed_seconds": 10.669831999999587
+}

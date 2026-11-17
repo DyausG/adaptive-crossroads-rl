@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "checks": [
+    "all switches off is standard DQN",
+    "emergency off disables ambulance origin",
+    "pause freezes rendered positions and time",
+    "emergency off disables injection",
+    "seek displays exact historical state",
+    "step advances one recorded second",
+    "seek and rendering never mutate evidence",
+    "Stop reaps single worker",
+    "paired startup shares route hash and seed",
+    "comparison uses selected controllers",
+    "composable inputs reach SUMO",
+    "paired N injection enters actual network",
+    "paired S injection enters actual network",
+    "paired E injection enters actual network",
+    "paired W injection enters actual network",
+    "all comparison frames synchronized",
+    "scheduled ambulance truly departs from West",
+    "paused seek presents equal timestamps",
+    "minimum window exposes essential controls",
+    "Restart replaces workers without overlap",
+    "repeat Stop cleans both workers",
+    "Stop during startup has no orphan workers",
+    "no Tk callback errors"
+  ],
+  "full_horizon": false,
+  "screenshots": true,
+  "note": "Programmatic real Tk widget invocation; real SUMO processes. No benchmark metrics changed."
+}

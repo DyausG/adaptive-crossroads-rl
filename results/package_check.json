@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "archive": "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads-submission.zip",
+  "bytes": 8344278,
+  "files": 959,
+  "sha256": "99a9dd7fa36ca4e2158bad6257790f0d57f966e03bacaeee6b177ea10304a393",
+  "route_files": 72,
+  "final_checkpoints": 6,
+  "archive_content_hashes_match": true,
+  "venv_and_caches_excluded": true
+}

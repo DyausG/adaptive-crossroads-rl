@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-17T18:36:59.897474+05:30 by Eclipse SUMO netconvert 1.28.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\vendor\sumo-rl\sumo_rl\nets\2way-single-intersection\single-intersection.net.xml"/>
+    </input>
+
+    <output>
+        <plain-output-prefix value="C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\data\network\base"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.avoid-overlap value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="0"/>
+        <junctions.limit-turn-speed value="-1.00"/>
+    </junctions>
+
+</netconvertConfiguration>
+-->
+
+<nodes version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <location netOffset="150.00,150.00" convBoundary="-0.07,0.00,300.00,300.00" origBoundary="-150.00,-150.00,150.00,150.00" projParameter="!"/>
+
+    <node id="e" x="300.00" y="150.00" type="priority"/>
+    <node id="n" x="150.00" y="300.00" type="priority"/>
+    <node id="s" x="150.00" y="0.00" type="priority"/>
+    <node id="t" x="150.00" y="150.00" type="traffic_light" tl="t"/>
+    <node id="w" x="0.00" y="150.00" type="priority"/>
+</nodes>

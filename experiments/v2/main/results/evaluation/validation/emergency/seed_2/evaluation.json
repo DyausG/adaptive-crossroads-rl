@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "experiment_id": "v2",
+  "obs_schema_version": "v2",
+  "controller": "emergency",
+  "model_seed": 2,
+  "split": "validation",
+  "episodes": 24,
+  "elapsed_seconds": 14.057902699998522,
+  "checkpoint": "experiments\\v2\\main\\models\\emergency_seed2\\final.zip",
+  "checkpoint_sha256": "bbfe11a2d37eedd4055d7e08c3c469c06aa9c4e62a43bcace44de63e47ae99c1",
+  "sumo_seed_policy": "Fixed manifest sumo_seed/bg_seed per route, independent of model seed"
+}

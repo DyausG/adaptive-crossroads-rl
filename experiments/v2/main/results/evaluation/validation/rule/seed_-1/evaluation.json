@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "experiment_id": "v2",
+  "obs_schema_version": "v2",
+  "controller": "rule",
+  "model_seed": -1,
+  "split": "validation",
+  "episodes": 24,
+  "elapsed_seconds": 13.35727979999865,
+  "checkpoint": null,
+  "checkpoint_sha256": null,
+  "sumo_seed_policy": "Fixed manifest sumo_seed/bg_seed per route, independent of model seed"
+}

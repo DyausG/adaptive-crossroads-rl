@@ -1,0 +1,7 @@
+{
+  "local_algorithm_changes": false,
+  "package_version": "1.4.5",
+  "repository": "https://github.com/LucasAlegre/sumo-rl",
+  "revision": "86f0fc41401eeca724b2e8878f5020dc6d70c9b4",
+  "bundled_assets": "Core package and two-way single-intersection inputs; other upstream assets excluded"
+}

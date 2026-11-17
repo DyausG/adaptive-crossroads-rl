@@ -1,0 +1,14 @@
+{
+  "pass": true,
+  "experiment_id": "v2",
+  "obs_schema_version": "v2",
+  "split": "validation",
+  "trained_models": 6,
+  "matched_evaluation_episodes": 264,
+  "scenarios": 24,
+  "incomplete_ambulance_passages": 0,
+  "censored_queue_recovery": 1,
+  "unfinished_regular_trips": 5105,
+  "uninserted_regular_trips": 1161,
+  "training_seconds_sum": 481.3125225000076
+}

@@ -1,0 +1,88 @@
+Using libsumo as traci as requested by environment variable.
+{
+  "pass": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\.venv\\Scripts\\python.exe",
+  "SUMO_HOME": "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\.venv\\Lib\\site-packages\\sumo",
+  "LIBSUMO_AS_TRACI": "1",
+  "versions": {
+    "eclipse-sumo": "1.28.0",
+    "libsumo": "1.28.0",
+    "sumo-rl": "1.4.5",
+    "stable-baselines3": "2.9.2",
+    "pandas": "3.0.6",
+    "matplotlib": "3.11.2",
+    "torch": "2.14.1+cpu",
+    "gymnasium": "1.4.0"
+  },
+  "sumo_version": "Eclipse SUMO sumo 1.28.0\n Build features: Windows-10.0.26100 AMD64 MSVC 19.51.36260.0 Release FMI Proj GUI FMT Intl SWIG Parquet Eigen GDAL FFmpeg OSG GL2PS JuPedSim\n Copyright (C) 2001-2026 German Aerospace Center (DLR) and others; https://sumo.dlr.de\n\nEclipse SUMO sumo 1.28.0 is part of SUMO.\nThis program and the accompanying materials\nare made available under the terms of the Eclipse Public License v2.0\nwhich accompanies this distribution, and is available at\nhttp://www.eclipse.org/legal/epl-v20.html\nThis program may also be made available under the following Secondary\nLicenses when the conditions for such availability set forth in the Eclipse\nPublic License 2.0 are satisfied: GNU General Public License, version 2\nor later which is available at\nhttps://www.gnu.org/licenses/old-licenses/gpl-2.0-standalone.html\nSPDX-License-Identifier: EPL-2.0 OR GPL-2.0-or-later\n",
+  "episodes": [
+    {
+      "episode": 0,
+      "simulator_steps": 500,
+      "agent_steps": 100,
+      "initial_observation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trace_sha256": "762810dbe2b6cf570cf43f41d6792a7e10ad126a3a7e2753733b8ad935482f3f",
+      "elapsed_seconds": 0.17374529999869992,
+      "simulator_steps_per_second": 2877.7756866156456
+    },
+    {
+      "episode": 1,
+      "simulator_steps": 500,
+      "agent_steps": 100,
+      "initial_observation": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "trace_sha256": "762810dbe2b6cf570cf43f41d6792a7e10ad126a3a7e2753733b8ad935482f3f",
+      "elapsed_seconds": 0.21997100000226055,
+      "simulator_steps_per_second": 2273.026898976964
+    }
+  ],
+  "csv_rows": {
+    "upstream_conn0_ep1.csv": 101,
+    "upstream_conn0_ep2.csv": 101
+  },
+  "elapsed_seconds": 2.2098055999995267
+}

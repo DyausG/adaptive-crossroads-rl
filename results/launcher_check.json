@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "controllers": 4,
+  "scenarios": 24,
+  "window_size": [
+    1160,
+    734
+  ],
+  "capture_method": "Pillow window-targeted capture of Tk's own HWND",
+  "screenshot": "demo/launcher.png"
+}

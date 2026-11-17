@@ -1,0 +1,13 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.14, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads
+collecting ... collected 5 items
+
+tests/test_gate2.py::test_generated_dataset_determinism_connectivity_partitions PASSED [ 20%]
+tests/test_gate2.py::test_features_mapping_and_reward PASSED             [ 40%]
+tests/test_gate2.py::test_recovery_edge_cases PASSED                     [ 60%]
+tests/test_gate2.py::test_integration_all_approaches_signal_safety_and_boundaries PASSED [ 80%]
+tests/test_gate2.py::test_rule_preemption_uses_legal_transition_path PASSED [100%]
+
+============================== 5 passed in 7.57s ==============================

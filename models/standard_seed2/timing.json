@@ -1,0 +1,42 @@
+[
+  {
+    "timesteps": 2500,
+    "elapsed_seconds": 5.921770799999649,
+    "steps_per_second": 422.17101681817
+  },
+  {
+    "timesteps": 5000,
+    "elapsed_seconds": 13.12053129999913,
+    "steps_per_second": 381.08212889216856
+  },
+  {
+    "timesteps": 7500,
+    "elapsed_seconds": 18.84937429999991,
+    "steps_per_second": 397.89119153944733
+  },
+  {
+    "timesteps": 10000,
+    "elapsed_seconds": 23.484674300001643,
+    "steps_per_second": 425.80960980154197
+  },
+  {
+    "timesteps": 12500,
+    "elapsed_seconds": 29.292416399999638,
+    "steps_per_second": 426.7316096189372
+  },
+  {
+    "timesteps": 15000,
+    "elapsed_seconds": 34.48147489999974,
+    "steps_per_second": 435.01619473939945
+  },
+  {
+    "timesteps": 17500,
+    "elapsed_seconds": 39.38859719999891,
+    "steps_per_second": 444.29101933085553
+  },
+  {
+    "timesteps": 20000,
+    "elapsed_seconds": 44.41910859999916,
+    "steps_per_second": 450.2566717424036
+  }
+]

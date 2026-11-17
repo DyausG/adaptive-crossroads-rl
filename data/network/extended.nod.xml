@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.20" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <location netOffset="150.00,150.00" convBoundary="-0.07,0.00,300.00,300.00" origBoundary="-150.00,-150.00,150.00,150.00" projParameter="!" />
+
+    <node id="e" x="550" y="150" type="priority" />
+    <node id="n" x="150" y="550" type="priority" />
+    <node id="s" x="150" y="-250" type="priority" />
+    <node id="t" x="150" y="150" type="traffic_light" tl="t" />
+    <node id="w" x="-250" y="150" type="priority" />
+</nodes>

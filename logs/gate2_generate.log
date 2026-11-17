@@ -1,0 +1,9 @@
+Using libsumo as traci as requested by environment variable.
+{
+  "scenario_count": 72,
+  "split_counts": {
+    "train": 36,
+    "validation": 12,
+    "test": 24
+  }
+}

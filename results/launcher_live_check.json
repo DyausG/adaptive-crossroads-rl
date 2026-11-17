@@ -1,0 +1,8 @@
+{
+  "pass": true,
+  "command": "python app.py --smoke-live",
+  "controller": "emergency",
+  "model_seed": 0,
+  "scenario": "scenario_3002",
+  "return_code": 0
+}

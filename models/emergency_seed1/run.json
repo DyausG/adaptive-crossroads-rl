@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "variant": "emergency",
+  "seed": 1,
+  "requested_steps": 20000,
+  "completed_steps": 20000,
+  "elapsed_seconds": 46.96333909999885,
+  "checkpoint_sha256": "b64aa1d9672a1aa68e11c373312d87f49488390eef918d5afc537af64aca7c51",
+  "parameters": 12680,
+  "checkpoint_reload_predict": true
+}

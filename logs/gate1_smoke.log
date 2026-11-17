@@ -1,0 +1,11 @@
+Using libsumo as traci as requested by environment variable.
+Traceback (most recent call last):
+  File "C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\scripts\smoke_test.py", line 97, in <module>
+    main()
+  File "C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\scripts\smoke_test.py", line 45, in main
+    env = CountedEnvironment(
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\vendor\sumo-rl\sumo_rl\environment\env.py", line 167, in __init__
+    traci.start([sumolib.checkBinary("sumo"), "-n", self._net])  # Start only to retrieve traffic light information
+    ^^^^^^^^^^^
+AttributeError: module 'traci' has no attribute 'start'

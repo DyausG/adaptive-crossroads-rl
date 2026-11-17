@@ -1,0 +1,2 @@
+Using libsumo as traci as requested by environment variable.
+{"pass": true, "variant": "standard", "seed": 99, "requested_steps": 2000, "completed_steps": 2000, "elapsed_seconds": 27.676935600000434, "checkpoint_sha256": "9d752bea4c1cc9761f3afa613cb970aef928cc898a4d5075d861874befdf8ed9", "parameters": 11656, "checkpoint_reload_predict": true}

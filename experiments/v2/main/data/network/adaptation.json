@@ -1,0 +1,46 @@
+{
+  "commands": [
+    [
+      "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\.venv\\Lib\\site-packages\\sumo\\bin\\netconvert.exe",
+      "-s",
+      "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\vendor\\sumo-rl\\sumo_rl\\nets\\2way-single-intersection\\single-intersection.net.xml",
+      "--plain-output-prefix",
+      "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\data\\network\\base"
+    ],
+    [
+      "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\.venv\\Lib\\site-packages\\sumo\\bin\\netconvert.exe",
+      "--node-files",
+      "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\data\\network\\extended.nod.xml",
+      "--edge-files",
+      "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\data\\network\\extended.edg.xml",
+      "--connection-files",
+      "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\data\\network\\base.con.xml",
+      "--tllogic-files",
+      "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\data\\network\\base.tll.xml",
+      "--no-turnarounds",
+      "true",
+      "-o",
+      "C:\\Users\\DG\\OneDrive\\Desktop\\Uni\\SEM VII\\Data Centre Vision\\Project-1\\crossroads\\data\\network\\crossroads.net.xml"
+    ]
+  ],
+  "approach_lengths_m": {
+    "e_t": [
+      389.6,
+      389.6
+    ],
+    "n_t": [
+      389.6,
+      389.6
+    ],
+    "s_t": [
+      389.6,
+      389.6
+    ],
+    "w_t": [
+      389.6,
+      389.6
+    ]
+  },
+  "source": "vendor\\sumo-rl\\sumo_rl\\nets\\2way-single-intersection\\single-intersection.net.xml",
+  "reason": "Upstream approaches are about 142m; extend outer nodes to 400m for a true 250m detection window."
+}

@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "experiment_id": "v2",
+  "controllers": 5,
+  "scenarios": 24,
+  "window_size": [
+    1320,
+    880
+  ],
+  "capture_method": "Pillow window-targeted capture of Tk's own HWND",
+  "screenshot": "experiments/v2/main/demo/launcher.png"
+}

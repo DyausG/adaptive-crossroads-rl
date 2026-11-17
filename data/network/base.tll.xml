@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-17T18:36:59.900837+05:30 by Eclipse SUMO netconvert 1.28.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\vendor\sumo-rl\sumo_rl\nets\2way-single-intersection\single-intersection.net.xml"/>
+    </input>
+
+    <output>
+        <plain-output-prefix value="C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\data\network\base"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.avoid-overlap value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="0"/>
+        <junctions.limit-turn-speed value="-1.00"/>
+    </junctions>
+
+</netconvertConfiguration>
+-->
+
+<tlLogics version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tllogic_file.xsd">
+    <tlLogic id="t" type="static" programID="0" offset="0">
+        <phase duration="33" state="GGrrrrGGrrrr"/>
+        <phase duration="2"  state="yyrrrryyrrrr"/>
+        <phase duration="6"  state="rrGrrrrrGrrr"/>
+        <phase duration="2"  state="rryrrrrryrrr"/>
+        <phase duration="33" state="rrrGGrrrrGGr"/>
+        <phase duration="2"  state="rrryyrrrryyr"/>
+        <phase duration="6"  state="rrrrrGrrrrrG"/>
+        <phase duration="2"  state="rrrrryrrrrry"/>
+    </tlLogic>
+
+    <connection from="e_t" to="t_n" fromLane="0" toLane="0" tl="t" linkIndex="3"/>
+    <connection from="e_t" to="t_w" fromLane="0" toLane="0" tl="t" linkIndex="4"/>
+    <connection from="e_t" to="t_s" fromLane="1" toLane="1" tl="t" linkIndex="5"/>
+    <connection from="n_t" to="t_w" fromLane="0" toLane="0" tl="t" linkIndex="0"/>
+    <connection from="n_t" to="t_s" fromLane="0" toLane="0" tl="t" linkIndex="1"/>
+    <connection from="n_t" to="t_e" fromLane="1" toLane="1" tl="t" linkIndex="2"/>
+    <connection from="s_t" to="t_e" fromLane="0" toLane="0" tl="t" linkIndex="6"/>
+    <connection from="s_t" to="t_n" fromLane="0" toLane="0" tl="t" linkIndex="7"/>
+    <connection from="s_t" to="t_w" fromLane="1" toLane="1" tl="t" linkIndex="8"/>
+    <connection from="w_t" to="t_s" fromLane="0" toLane="0" tl="t" linkIndex="9"/>
+    <connection from="w_t" to="t_e" fromLane="0" toLane="0" tl="t" linkIndex="10"/>
+    <connection from="w_t" to="t_n" fromLane="1" toLane="1" tl="t" linkIndex="11"/>
+</tlLogics>

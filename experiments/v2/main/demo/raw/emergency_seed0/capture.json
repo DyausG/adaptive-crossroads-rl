@@ -1,0 +1,273 @@
+{
+  "experiment_id": "v2",
+  "controller": "emergency",
+  "model_seed": 0,
+  "scenario": "scenario_30002_emergency",
+  "split": "test",
+  "route_sha256": "2bb730b605c6796514040545e4b20cb2e9a0fed740413044ee1b122dc5093289",
+  "backend": "TraCI + sumo-gui",
+  "LIBSUMO_AS_TRACI": null,
+  "headless_metrics_match": true,
+  "benchmark_verified": true,
+  "metrics": {
+    "scenario": "scenario_30002_emergency",
+    "route_seed": 130002,
+    "bg_seed": 30002,
+    "level": "rush",
+    "asymmetric": true,
+    "imbalance": "ew_heavy",
+    "emergency": true,
+    "ambulance_approach": "n",
+    "horizon": 1200.0,
+    "ambulance_requested_depart": 252,
+    "ambulance_entry": 263.0,
+    "ambulance_clear": 291.0,
+    "ambulance_depart_actual": 253.0,
+    "ambulance_insertion_delay_seconds": 1.0,
+    "ambulance_scheduled_to_clear_seconds": 39.0,
+    "ambulance_passage_seconds": 28.0,
+    "ambulance_passage_status": "completed",
+    "ambulance_observed_seconds": 28.0,
+    "regular_wait_mean_completed": 79.424,
+    "regular_wait_p95_completed": 191.0,
+    "regular_wait_mean_inserted": 71.51448275862069,
+    "regular_time_loss_mean_inserted": 143.71043817749214,
+    "max_approach_wait_seconds": 378.0,
+    "regular_scheduled": 786,
+    "regular_departed": 725,
+    "regular_completed": 625,
+    "regular_unfinished": 100,
+    "regular_not_inserted": 61,
+    "colliding_vehicle_events": 0,
+    "ambulance_red_crossings": 0,
+    "teleported_vehicles": 0,
+    "final_queue": 1,
+    "pending_vehicle_seconds": 94166,
+    "stopped_plus_pending_seconds_per_requested_vehicle": 185.53494282083864,
+    "pre_arrival_queue": 37.416666666666664,
+    "recovery_threshold": 41.15833333333333,
+    "queue_recovery_seconds": 444.0,
+    "recovery_status": "recovered",
+    "recovery_observed_seconds": 444.0,
+    "post_clearance_excess_queue_area_120s": 1411.3250000000003
+  },
+  "frames": [
+    {
+      "requested_at_sim_second": 200,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0200.png",
+      "sha256": "2d494ebdc0707916294fff078f98e5da5765e3bb90a5cb8633fe1cf2fa52c7a3"
+    },
+    {
+      "requested_at_sim_second": 220,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0220.png",
+      "sha256": "0a2d9bdc0eab8e05397aec618ece6683e6f5e3a61f2c315a67c6cd9b457cbb52"
+    },
+    {
+      "requested_at_sim_second": 240,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0240.png",
+      "sha256": "a8dbc71fd913dcc1b5cb1ac9f0bfbbffb82c9545717f04330112aaa914b56349"
+    },
+    {
+      "requested_at_sim_second": 260,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0260.png",
+      "sha256": "c5bd03688b75318fa693b47fab3d969046f8ad24678fd278c3535425d6086d90"
+    },
+    {
+      "requested_at_sim_second": 280,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0280.png",
+      "sha256": "ca3d2c1fd7aa8923386e939eef2bc118083d8ce6515fb1c86e53a83769f21bb9"
+    },
+    {
+      "requested_at_sim_second": 300,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0300.png",
+      "sha256": "6a858a0319c63d71155fcd5ff7ff91f93277d828e2a66ad6185be88e7ef9899f"
+    },
+    {
+      "requested_at_sim_second": 320,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0320.png",
+      "sha256": "70991eeea6cc1359ae24aba1024a87ead277628598b375d7bb9179f8f18a7d84"
+    },
+    {
+      "requested_at_sim_second": 340,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0340.png",
+      "sha256": "d2e919339dd0702d605dcf0ff53dfb9f1293da79067b4cb712a8a02f79d9d5b9"
+    },
+    {
+      "requested_at_sim_second": 360,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0360.png",
+      "sha256": "2dda5ccd061d6afb0cd495d899633458d561c3798d675f78e8a2b059fccd28f8"
+    },
+    {
+      "requested_at_sim_second": 380,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0380.png",
+      "sha256": "bccb505e6f5f5ab401875807964f1cc6b5b18e1b79b753451952082e42269b4b"
+    },
+    {
+      "requested_at_sim_second": 400,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0400.png",
+      "sha256": "29aad0123bfa536b3e4bdfd07ef9e7640a0c78a146826cd639d8f58492249616"
+    },
+    {
+      "requested_at_sim_second": 420,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0420.png",
+      "sha256": "2e37f301e2553ce8bcafe0e7f471eaf8b7356c2285b4930175005750cd508225"
+    },
+    {
+      "requested_at_sim_second": 440,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0440.png",
+      "sha256": "1f816445c0b56edc981c8c975a069f5c5e3399267178fff00cc0f247e74c4287"
+    },
+    {
+      "requested_at_sim_second": 460,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0460.png",
+      "sha256": "396a313ef3d6b6e0e81ce5cd8c8dfd400e9c9008067c3937c10f3b9a483fdef8"
+    },
+    {
+      "requested_at_sim_second": 480,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0480.png",
+      "sha256": "36622fe1b75e4b328b1b5c3ba4f0774aef5650cf940342e22bc61c2c2f86dfd8"
+    },
+    {
+      "requested_at_sim_second": 500,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0500.png",
+      "sha256": "0ac3f919730d979e9a77bd974d55c7caf7f696af1b73f44ee8bad35ff2d273eb"
+    },
+    {
+      "requested_at_sim_second": 520,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0520.png",
+      "sha256": "2e0c649667bcb651354492df7450a9b42d8916ccc706a3a6c01903e0441751f8"
+    },
+    {
+      "requested_at_sim_second": 540,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0540.png",
+      "sha256": "53332996d0481e8d31ed50149f199532a9acae365a24d2b0410c2747ad994d5a"
+    },
+    {
+      "requested_at_sim_second": 560,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0560.png",
+      "sha256": "454796cc14b55a112ea20d5a23493f7de871daccd6d9dac189843318657c36d6"
+    },
+    {
+      "requested_at_sim_second": 580,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0580.png",
+      "sha256": "00d6b023afca0597429cf288eecd75c7c3d4bdd037911c407c84c325aa6cf358"
+    },
+    {
+      "requested_at_sim_second": 600,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0600.png",
+      "sha256": "dfc52bed02153b9674a3621d3cafeddf91f3cbaf2fbcc4f28564be52fabd5e50"
+    },
+    {
+      "requested_at_sim_second": 620,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0620.png",
+      "sha256": "60e7cabd60e7125e473a2a5c7b05a1d34b2e59dc20f955a7ccc8e17d023c38c2"
+    },
+    {
+      "requested_at_sim_second": 640,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0640.png",
+      "sha256": "cac752174e4e7a23be42609199cad417365c8c2331bc930a082ef2361989f103"
+    },
+    {
+      "requested_at_sim_second": 660,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0660.png",
+      "sha256": "4be6c719b3fd3f13814ad8cbbf4d5b9c4668192829d5ece0d8e362d74dc16ecd"
+    },
+    {
+      "requested_at_sim_second": 680,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0680.png",
+      "sha256": "24dd7750612f4f423a892bb9e5f1517b5571a5e80ffdf8e4e31ff6bba4c05e47"
+    },
+    {
+      "requested_at_sim_second": 700,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0700.png",
+      "sha256": "dccd4202cf6f3ef4acbbb809cd44f58c45d06c912a8429bab0a50e793885bf7c"
+    },
+    {
+      "requested_at_sim_second": 720,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0720.png",
+      "sha256": "246c454d721359fbc121847bd9c2519da0aa56f3f893777996978558cf651452"
+    },
+    {
+      "requested_at_sim_second": 740,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0740.png",
+      "sha256": "aa329e1935fa8e6fcec07a7137fd08b7237ffab16f96274374e64dd25bac6728"
+    },
+    {
+      "requested_at_sim_second": 760,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0760.png",
+      "sha256": "3a2ded677e04d854fe324ff750ff50901e623de3fa246360eef3fb2855538b15"
+    },
+    {
+      "requested_at_sim_second": 780,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0780.png",
+      "sha256": "ebeb64ad535aeeb529f2f8a944f94fad8ed9e47eb4138cd3fef447c4360901d5"
+    },
+    {
+      "requested_at_sim_second": 800,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0800.png",
+      "sha256": "4491679ce41f2aab0592b993f3bac4cd6eeef422e88a628b516d00cb4f734a1c"
+    },
+    {
+      "requested_at_sim_second": 820,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0820.png",
+      "sha256": "7f535a3ad39edcf4b15902305215585be7f546e404b1a4fa96338b5a7ce81046"
+    },
+    {
+      "requested_at_sim_second": 840,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0840.png",
+      "sha256": "fcea7d15d3fe4f43411f380b582b0d321877bd960fddb228e0c10070190c9f95"
+    },
+    {
+      "requested_at_sim_second": 860,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0860.png",
+      "sha256": "2272d0b2c78da30623d5f922ea93313a60812fb21f73237073b09c87f59f97f3"
+    },
+    {
+      "requested_at_sim_second": 880,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0880.png",
+      "sha256": "fb2cb015a2e3c2bea82b97b96b26723c56260918e22620cb3860c4bf085d536e"
+    },
+    {
+      "requested_at_sim_second": 900,
+      "rendered": "next simulation step per SUMO API",
+      "path": "experiments/v2/main/demo/raw/emergency_seed0/frame_0900.png",
+      "sha256": "843597752ade53582959f208ff1fc6fafa6fa38c6c9cc1a8f8d89ad1c1ef0fea"
+    }
+  ],
+  "selection": "First held-out asymmetric rush-hour ambulance scenario (scenario_30002_emergency); model seed 0, predeclared before evaluation"
+}

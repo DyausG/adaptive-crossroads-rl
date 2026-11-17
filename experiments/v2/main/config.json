@@ -1,0 +1,42 @@
+{
+  "experiment_id": "v2",
+  "run_id": "main",
+  "obs_schema_version": "v2",
+  "reward_schema_version": "v2",
+  "obs_dims": {
+    "standard": 26,
+    "emergency": 34
+  },
+  "controllers": [
+    "fixed",
+    "rule",
+    "standard",
+    "emergency",
+    "hybrid"
+  ],
+  "signal": {
+    "delta_time": 5,
+    "yellow_time": 3,
+    "min_green": 10,
+    "max_green": 60,
+    "enforce_max_green": true
+  },
+  "detection_m": 250.0,
+  "seed_allocation": {
+    "train_bg_seeds": "10000-10023 (24 paired = 48 routes)",
+    "validation_bg_seeds": "20000-20011 (12 paired = 24 routes)",
+    "test_bg_seeds": "30000-30011 (12 paired = 24 routes)",
+    "learner_seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "training_budget": {
+    "steps_per_model": 40000,
+    "exploration_fraction": 0.35,
+    "checkpoint_selection": "Final checkpoint at predeclared 40,000-step budget after validation verification; no test-based selection"
+  },
+  "predeclared_demo_scenario": "scenario_30002_emergency",
+  "manifest_sha256": "cfc5f61cb73882f8bca25d50abb63585da2ac4aa058bcce3a3a978ec9859cf12"
+}

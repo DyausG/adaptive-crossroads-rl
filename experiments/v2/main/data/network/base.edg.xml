@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-17T18:36:59.898254+05:30 by Eclipse SUMO netconvert 1.28.0
+<netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\vendor\sumo-rl\sumo_rl\nets\2way-single-intersection\single-intersection.net.xml"/>
+    </input>
+
+    <output>
+        <plain-output-prefix value="C:\Users\DG\OneDrive\Desktop\Uni\SEM VII\Data Centre Vision\Project-1\crossroads\data\network\base"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.avoid-overlap value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="0"/>
+        <junctions.limit-turn-speed value="-1.00"/>
+    </junctions>
+
+</netconvertConfiguration>
+-->
+
+<edges version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <edge id="e_t" from="e" to="t" priority="-1" numLanes="2" speed="13.90"/>
+    <edge id="n_t" from="n" to="t" priority="-1" numLanes="2" speed="13.90"/>
+    <edge id="s_t" from="s" to="t" priority="-1" numLanes="2" speed="13.90"/>
+    <edge id="t_e" from="t" to="e" priority="-1" numLanes="2" speed="13.90"/>
+    <edge id="t_n" from="t" to="n" priority="-1" numLanes="2" speed="13.90"/>
+    <edge id="t_s" from="t" to="s" priority="-1" numLanes="2" speed="13.90"/>
+    <edge id="t_w" from="t" to="w" priority="-1" numLanes="2" speed="13.90" shape="150.00,153.30 -0.07,153.30" spreadType="center"/>
+    <edge id="w_t" from="w" to="t" priority="-1" numLanes="2" speed="13.90"/>
+</edges>

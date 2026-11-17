@@ -1,0 +1,263 @@
+{
+  "controller": "rule",
+  "model_seed": null,
+  "scenario": "scenario_3002",
+  "route_sha256": "548248789d7cf2864c18ec03354140a065a18348040cde8cf75ab90c08b30f7f",
+  "backend": "TraCI + sumo-gui",
+  "LIBSUMO_AS_TRACI": null,
+  "headless_metrics_match": true,
+  "metrics": {
+    "scenario": "scenario_3002",
+    "route_seed": 3002,
+    "level": "rush",
+    "asymmetric": true,
+    "emergency": true,
+    "ambulance_approach": "s",
+    "horizon": 1200.0,
+    "ambulance_entry": 532.0,
+    "ambulance_clear": 649.0,
+    "ambulance_depart_actual": 403.0,
+    "ambulance_passage_seconds": 117.0,
+    "ambulance_passage_status": "completed",
+    "ambulance_observed_seconds": 117.0,
+    "regular_wait_mean_completed": 91.35402684563758,
+    "regular_wait_p95_completed": 216.5,
+    "regular_wait_mean_inserted": 99.80829756795423,
+    "regular_time_loss_mean_inserted": 159.15364019422782,
+    "regular_scheduled": 787,
+    "regular_departed": 699,
+    "regular_completed": 596,
+    "regular_unfinished": 103,
+    "regular_not_inserted": 88,
+    "colliding_vehicle_events": 0,
+    "ambulance_red_crossings": 0,
+    "teleported_vehicles": 0,
+    "final_queue": 66,
+    "pending_vehicle_seconds": 86513,
+    "stopped_plus_pending_seconds_per_requested_vehicle": 198.4517766497462,
+    "pre_arrival_queue": 55.333333333333336,
+    "recovery_threshold": 60.866666666666674,
+    "queue_recovery_seconds": 0.0,
+    "recovery_status": "recovered",
+    "recovery_observed_seconds": 0.0
+  },
+  "frames": [
+    {
+      "requested_at_sim_second": 200,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0200.png",
+      "sha256": "88febceed874071265b53c51167aa7c22627113cb7e94690f1b1e6d72fe3f8bd"
+    },
+    {
+      "requested_at_sim_second": 220,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0220.png",
+      "sha256": "b31b93a30bda9ea84f897b0a16c0677918fe1e503c12e711ce431d846044000e"
+    },
+    {
+      "requested_at_sim_second": 240,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0240.png",
+      "sha256": "bed0518891c55aec7e47756061534e3fa269ea41e85781e301e8de4f3d5c2fca"
+    },
+    {
+      "requested_at_sim_second": 260,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0260.png",
+      "sha256": "7e0776a309fbe164c867ebfaa67ba858b6be2f10fe07731f130740be9a980eaa"
+    },
+    {
+      "requested_at_sim_second": 280,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0280.png",
+      "sha256": "6953fe25de02b2f6c5deefcdf1525d9a42992d0afa54c1e93ee1e4f9dd059f91"
+    },
+    {
+      "requested_at_sim_second": 300,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0300.png",
+      "sha256": "9cbdffdb008f91b30f3adb4e147085ae64001ea6f57819d4ae975e3477d8fea5"
+    },
+    {
+      "requested_at_sim_second": 320,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0320.png",
+      "sha256": "1f159e5ebc2bdef7227e7dc999bc730fc58e5cda6639ab461ab1eaba9912da34"
+    },
+    {
+      "requested_at_sim_second": 340,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0340.png",
+      "sha256": "1fdf465cd62dd57db50853b4af5f6b3ef11b17d63d9c41650274674eb048cc96"
+    },
+    {
+      "requested_at_sim_second": 360,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0360.png",
+      "sha256": "692cb9e1759b000ceb5adbec74969cee693261c964a6e94d771fe8c63527806c"
+    },
+    {
+      "requested_at_sim_second": 380,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0380.png",
+      "sha256": "bd3537efd8553cff5f7109d4d5ddbbb85888b7a10009b39bec6bc2b66689b38d"
+    },
+    {
+      "requested_at_sim_second": 400,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0400.png",
+      "sha256": "57a5186e32d3e6b92286b35bf8a0c92c576aa9ad0c59a8bf06c8a460aff50d94"
+    },
+    {
+      "requested_at_sim_second": 420,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0420.png",
+      "sha256": "667c7a98a9a41ac5e30f1207d3ea7049c33e961168cbac6c2a126995c827244e"
+    },
+    {
+      "requested_at_sim_second": 440,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0440.png",
+      "sha256": "fbecaac30f45dd7319c6b9a88b9779869651b5d4b57b501eccca32d4adb428e6"
+    },
+    {
+      "requested_at_sim_second": 460,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0460.png",
+      "sha256": "1b2653408e701837a8b152d65c17870fb189eb57bf4d2c7eae859cf75050acb7"
+    },
+    {
+      "requested_at_sim_second": 480,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0480.png",
+      "sha256": "367913c713f288c35f0fd883326d3cbb3aac99327bf5c623b97023c7c948665f"
+    },
+    {
+      "requested_at_sim_second": 500,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0500.png",
+      "sha256": "8d589a57f23494e2d33d283cf7595493524b7de89d5756329d38ee7b9162bd1b"
+    },
+    {
+      "requested_at_sim_second": 520,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0520.png",
+      "sha256": "20dc694e7f07fa9aa689cc5e2e47e21118063c241be395e69d0fa731790346d3"
+    },
+    {
+      "requested_at_sim_second": 540,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0540.png",
+      "sha256": "35fa70419a793de2208de61ce3b17e69fd4c8a8f5ff9e2f0d82410d918cd36e8"
+    },
+    {
+      "requested_at_sim_second": 560,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0560.png",
+      "sha256": "2937f49665fb3c2dca51d86963348a22571b42021ecd7d98fdb837679fceecb0"
+    },
+    {
+      "requested_at_sim_second": 580,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0580.png",
+      "sha256": "467d3da6f59b0542138c184ed4927da22ece19a01a162261160ab0fc2b11c854"
+    },
+    {
+      "requested_at_sim_second": 600,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0600.png",
+      "sha256": "3c5ed54d09445684524a10236d947f4a7eee1c51240b72acdb4272d38a1dbe12"
+    },
+    {
+      "requested_at_sim_second": 620,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0620.png",
+      "sha256": "095b376ebd88491dada598817c654ef4122d263bb8deafc86fa10db4de3db4eb"
+    },
+    {
+      "requested_at_sim_second": 640,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0640.png",
+      "sha256": "6bb9dbc6794ac1bc5d76c2e562aa81e488593b7bff4ce044d992a7b57a6e01d5"
+    },
+    {
+      "requested_at_sim_second": 660,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0660.png",
+      "sha256": "9d7676f61bf5e30784284b31825bcd325784c48329f034c3e24ec42d953d887f"
+    },
+    {
+      "requested_at_sim_second": 680,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0680.png",
+      "sha256": "db1444315c83deed8bae6a0059ed9a21e030e3e14d4cf16a24d50f30b0b84135"
+    },
+    {
+      "requested_at_sim_second": 700,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0700.png",
+      "sha256": "159d1f59c126622cdbe2281767e8adc96d89248af46cbe0652971b769f039246"
+    },
+    {
+      "requested_at_sim_second": 720,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0720.png",
+      "sha256": "0277733cbea53b43d0736d4ae2e09dc2275763f622d286bf9464717dc28ead28"
+    },
+    {
+      "requested_at_sim_second": 740,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0740.png",
+      "sha256": "ccd61842d26c17f8a32b33526907f2e6e51859f09ec1f6bc65d809d1d3918bf5"
+    },
+    {
+      "requested_at_sim_second": 760,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0760.png",
+      "sha256": "1676cd7eb1a88541d935c10936a915cb2c59581c744ffa763cd638492f70687d"
+    },
+    {
+      "requested_at_sim_second": 780,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0780.png",
+      "sha256": "b1a74c9d8ae467aed58942c1e57c46431fa943dbf0c58cbfceeb17d616297599"
+    },
+    {
+      "requested_at_sim_second": 800,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0800.png",
+      "sha256": "4fafab01f1f33d632cea47ead6298dd75ad4fcf53c46bf723818d8ee11df631e"
+    },
+    {
+      "requested_at_sim_second": 820,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0820.png",
+      "sha256": "cf73ad3941157dc1c24a936f4469eed4808294ab7505d714536f8ddb7cd6614e"
+    },
+    {
+      "requested_at_sim_second": 840,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0840.png",
+      "sha256": "021373c6b441012ea31c68bfbc2c12781d49c684452c07fa0d61d442883fb854"
+    },
+    {
+      "requested_at_sim_second": 860,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0860.png",
+      "sha256": "e98123e215d96ea9f2f07b0e56ef26a1d82f57cc55ba8d1a2180967ae8fcea8e"
+    },
+    {
+      "requested_at_sim_second": 880,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0880.png",
+      "sha256": "8c35b2cf146801cfb608f455c25b658de4c821d5dedaa2fe6bfbbf6f6252c9c5"
+    },
+    {
+      "requested_at_sim_second": 900,
+      "rendered": "next simulation step per SUMO API",
+      "path": "demo\\raw\\rule_seed0\\frame_0900.png",
+      "sha256": "da1a4060ae2c5d9e63ba28100440d6625e089169ca7c18b5e972d4781abb9a61"
+    }
+  ],
+  "selection": "First held-out asymmetric rush-hour ambulance scenario; model seed 0, not selected for performance"
+}

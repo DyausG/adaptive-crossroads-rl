@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "experiment_id": "v2",
+  "obs_schema_version": "v2",
+  "controller": "hybrid",
+  "model_seed": 1,
+  "split": "validation",
+  "episodes": 24,
+  "elapsed_seconds": 13.375240099998337,
+  "checkpoint": "experiments\\v2\\main\\models\\standard_seed1\\final.zip",
+  "checkpoint_sha256": "d7a7509fd62cce94b0bd3e80328bb0143fc8b687a68a39196618737654f8bc93",
+  "sumo_seed_policy": "Fixed manifest sumo_seed/bg_seed per route, independent of model seed"
+}

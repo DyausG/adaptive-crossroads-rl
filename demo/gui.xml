@@ -1,0 +1,6 @@
+<viewsettings>
+  <scheme name="crossroads">
+    <background backgroundColor="242,246,250" showGrid="0"/>
+    <vehicles vehicleMode="0" vehicleQuality="2" vehicle_minSize="3" vehicle_exaggeration="1.8" showBlinker="1"/>
+  </scheme>
+</viewsettings>

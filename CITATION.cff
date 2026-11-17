@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this academic project, cite its repository and the upstream tools identified in THIRD_PARTY_NOTICES.md."
+title: "Adaptive Crossroads Control with Emergency Vehicle Priority"
+type: software
+version: 1.0.0
+date-released: '2026-11-18'
+authors:
+  - family-names: "Ghangas"
+    given-names: "Dyaus"
+repository-code: "https://github.com/DyausG/adaptive-crossroads-rl"
+url: "https://github.com/DyausG/adaptive-crossroads-rl"
+license: MIT
+keywords:
+  - reinforcement learning
+  - traffic signal control
+  - SUMO
+  - emergency vehicle priority

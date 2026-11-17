@@ -1,0 +1,13 @@
+Using libsumo as traci as requested by environment variable.
+{
+  "pass": true,
+  "split": "validation",
+  "trained_models": 6,
+  "matched_evaluation_episodes": 96,
+  "scenarios": 12,
+  "incomplete_ambulance_passages": 0,
+  "censored_queue_recovery": 3,
+  "unfinished_regular_trips": 1796,
+  "uninserted_regular_trips": 393,
+  "training_seconds_sum": 283.0312405999939
+}

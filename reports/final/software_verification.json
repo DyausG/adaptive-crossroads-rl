@@ -1,0 +1,22 @@
+{
+  "pytest.xml": {
+    "tests": 300,
+    "passed": true
+  },
+  "pure_state_tests.xml": {
+    "tests": 267,
+    "passed": true
+  },
+  "final_worker_tests.xml": {
+    "tests": 22,
+    "passed": true
+  },
+  "desktop_checks.json": {
+    "checks": 24,
+    "passed": true
+  },
+  "desktop_layout_checks.json": {
+    "checks": 23,
+    "passed": true
+  }
+}

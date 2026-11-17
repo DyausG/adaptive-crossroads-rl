@@ -1,0 +1,62 @@
+[
+  {
+    "controller": "fixed",
+    "label": "Fixed-time",
+    "runs": 12,
+    "passage_mean": 119.0,
+    "passage_p95": 386.8499999999999,
+    "passage_seed_std": null,
+    "regular_wait": 60.24137512007646,
+    "regular_wait_seed_std": null,
+    "congestion": 80.3686573545401,
+    "recovery_completed": 12,
+    "recovery_censored": 0,
+    "unfinished_regular": 393,
+    "uninserted_regular": 223
+  },
+  {
+    "controller": "rule",
+    "label": "Rule preemption",
+    "runs": 12,
+    "passage_mean": 39.416666666666664,
+    "passage_p95": 107.1,
+    "passage_seed_std": null,
+    "regular_wait": 58.49869838643635,
+    "regular_wait_seed_std": null,
+    "congestion": 75.38492003137414,
+    "recovery_completed": 12,
+    "recovery_censored": 0,
+    "unfinished_regular": 359,
+    "uninserted_regular": 176
+  },
+  {
+    "controller": "standard",
+    "label": "Standard DQN",
+    "runs": 36,
+    "passage_mean": 74.05555555555556,
+    "passage_p95": 137.25,
+    "passage_seed_std": 8.482552900141778,
+    "regular_wait": 53.18036886090102,
+    "regular_wait_seed_std": 5.314107977609843,
+    "congestion": 54.12773250647117,
+    "recovery_completed": 28,
+    "recovery_censored": 8,
+    "unfinished_regular": 895,
+    "uninserted_regular": 0
+  },
+  {
+    "controller": "emergency",
+    "label": "Emergency-aware DQN",
+    "runs": 36,
+    "passage_mean": 85.38888888888889,
+    "passage_p95": 261.0,
+    "passage_seed_std": 41.37047502390689,
+    "regular_wait": 64.08712724685086,
+    "regular_wait_seed_std": 26.404137770181244,
+    "congestion": 66.48895666755924,
+    "recovery_completed": 36,
+    "recovery_censored": 0,
+    "unfinished_regular": 518,
+    "uninserted_regular": 0
+  }
+]

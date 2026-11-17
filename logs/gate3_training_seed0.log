@@ -1,0 +1,19 @@
+Using libsumo as traci as requested by environment variable.
+standard_seed0: 2500 steps, 6.7s
+standard_seed0: 5000 steps, 12.7s
+standard_seed0: 7500 steps, 18.4s
+standard_seed0: 10000 steps, 23.6s
+standard_seed0: 12500 steps, 28.1s
+standard_seed0: 15000 steps, 33.0s
+standard_seed0: 17500 steps, 38.1s
+standard_seed0: 20000 steps, 43.7s
+{"pass": true, "variant": "standard", "seed": 0, "requested_steps": 20000, "completed_steps": 20000, "elapsed_seconds": 47.409004999997705, "checkpoint_sha256": "3dabd59eea2dbafe0559d6870f98107cd7a08513ee3a7e42fe727d6de640c619", "parameters": 11656, "checkpoint_reload_predict": true}
+emergency_seed0: 2500 steps, 5.4s
+emergency_seed0: 5000 steps, 11.1s
+emergency_seed0: 7500 steps, 17.2s
+emergency_seed0: 10000 steps, 23.1s
+emergency_seed0: 12500 steps, 27.2s
+emergency_seed0: 15000 steps, 32.0s
+emergency_seed0: 17500 steps, 38.2s
+emergency_seed0: 20000 steps, 45.4s
+{"pass": true, "variant": "emergency", "seed": 0, "requested_steps": 20000, "completed_steps": 20000, "elapsed_seconds": 45.44936859999871, "checkpoint_sha256": "e767cecf41e93d1bd502e2cca39376d86dd051066e708986a572b4d53d304faf", "parameters": 12680, "checkpoint_reload_predict": true}

@@ -1,0 +1,15 @@
+{
+  "pass": true,
+  "experiment_id": "v2",
+  "obs_schema_version": "v2",
+  "reward_schema_version": "v2",
+  "obs_dim": 34,
+  "variant": "emergency",
+  "seed": 0,
+  "requested_steps": 40000,
+  "completed_steps": 40000,
+  "elapsed_seconds": 82.41444150000098,
+  "checkpoint_sha256": "f1e11e1abf9bd3f70c700aabbe78b1e1b8e5fd8846912f8f958b87b086b19ab0",
+  "parameters": 13320,
+  "checkpoint_reload_predict": true
+}

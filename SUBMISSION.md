@@ -38,16 +38,17 @@ Output: `output/submission/adaptive-crossroads-rl-submission.zip`, with a SHA-25
 
 ## Report source
 
-`reports/final/Adaptive_Crossroads_Project_Report.md` is the editable report source. `metadata.json` stores the supplied student details; no institution or supervisor is invented. Numeric tables come from `report_evidence.json`, independently recomputed from raw episode records.
+`reports/final/Adaptive_Crossroads_Project_Report.docx` is the editable report, with the same academic format as the supplied reference. It includes the Thapar Institute logo, contents, certificate, acknowledgement, numbered subsections and reflections. The instructor is Dr. Himika Sharma. `metadata.json` stores the supplied details. Numeric tables are supported by `report_evidence.json`, independently recomputed from raw episode records.
 
-To regenerate the PDF and Markdown with the documented report dependencies:
+To rebuild the DOCX and Markdown with the documented report dependencies, then refresh the contents/page fields and export PDF using Microsoft Word on Windows:
 
 ```powershell
 python -m pip install -r requirements-report.txt
 python scripts/build_project_report.py
+powershell -NoProfile -File scripts/render_project_report.ps1
 ```
 
-The PDF has a contents page, metric definitions, methodology, controller/training details, results, charts, actual application capture, implementation difficulties, verification, limitations and references. Retain the code/data licenses when redistributing the submission.
+The retained DOCX supplies the page geometry, styles, numbering, footer and institute logo. `report_content.json` stores the technical content for rebuilding. The PDF has metric definitions, methodology, controller/training details, results, charts, actual application capture, implementation difficulties, verification, limitations and references. Retain the code/data licenses when redistributing the submission.
 
 ## Before uploading
 

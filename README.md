@@ -4,7 +4,7 @@
 
 **Dyaus Ghangas · 102308054 · Reinforcement Learning - UCS760**
 
-[Project report](reports/final/Adaptive_Crossroads_Project_Report.pdf) · [Dataset and storage](DATASET.md) · [Reproduction guide](CONTRIBUTING.md)
+[Project report](reports/final/Adaptive_Crossroads_Project_Report.pdf) · [Editable Word report](reports/final/Adaptive_Crossroads_Project_Report.docx) · [Dataset and storage](DATASET.md) · [Reproduction guide](CONTRIBUTING.md)
 
 ![Actual synchronized simulation with emergency-aware DQN and rule-based preemption](docs/images/simulation.png)
 

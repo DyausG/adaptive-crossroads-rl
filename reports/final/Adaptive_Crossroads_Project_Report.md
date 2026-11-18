@@ -1,28 +1,70 @@
-# Adaptive Crossroads Control with Emergency Vehicle Priority
-
-Dyaus Ghangas
-
-Roll number 102308054
+A Project Report submitted for
 
 Reinforcement Learning - UCS760
 
-18 November 2026
+On
 
-A reproducible single-intersection study of adaptive signal control, ambulance priority and ordinary-traffic delay, with trained DQN policies and a synchronized desktop simulator.
+Adaptive Crossroads Control with
+Emergency Vehicle Priority
 
-Repository: https://github.com/DyausG/adaptive-crossroads-rl
+By
+
+Dyaus Ghangas          102308054
+
+Submitted to:
+
+Dr. Himika Sharma
+
+## Certificate
+
+This is to certify that the project report entitled “Adaptive Crossroads Control with Emergency Vehicle Priority”, submitted by Dyaus Ghangas (Roll Number 102308054) to Dr. Himika Sharma, Thapar Institute of Engineering and Technology, Patiala, in fulfilment of the course requirement of Reinforcement Learning (UCS760), presents the design, implementation and experimental evaluation of the project.
+
+The report records the problem formulation, synthetic dataset, trained controllers, simulation application and measured outcomes. The results are supported by the configurations, checkpoints, evaluation records and verification evidence accompanying the project.
+
+Dr. Himika Sharma
+
+Course Instructor, UCS760
+
+Dyaus Ghangas
+
+102308054
+
+## Acknowledgement
+
+I would like to express my sincere gratitude to Dr. Himika Sharma, course instructor for Reinforcement Learning (UCS760), for the opportunity to undertake this project and apply the concepts studied in the course. Developing Adaptive Crossroads Control with Emergency Vehicle Priority provided a practical setting for understanding state design, reward formulation, deep Q-learning and experimental evaluation. I am also grateful to Thapar Institute of Engineering and Technology, Patiala, for the academic environment in which this work was carried out. The project strengthened my understanding of reproducibility, fair controller comparison and the importance of reporting limitations alongside measured results. I thank everyone who supported the completion of the project.
+
+## Introduction
+
+### 1.1 Project Overview
 
 Fixed traffic-signal schedules cannot respond directly to changing demand or an approaching ambulance. This project models a four-way signalized junction in SUMO, formulates signal selection as a Markov decision process, and compares fixed-time control, legal rule-based preemption, standard deep Q-learning, emergency-aware deep Q-learning and an explicitly identified hybrid controller. The study uses 96 synthetic routes arranged as 48 matched normal/emergency pairs, with separate training, validation and held-out test partitions. Six DQN policies are trained for 40000 decisions each. The 264 test episodes include 12 emergency routes per controller and three learner seeds for learned policies. Mean detection-to-clear passage is 98.3 seconds for fixed-time, 38.2 for rule preemption, 75.6 for standard DQN, 41.4 for emergency-aware DQN and 33.5 for hybrid Rule+DQN. Emergency-aware DQN improves the standard DQN mean by 45.2 percent on this test set, but does not outperform rule preemption on that mean. Ordinary-traffic wait and remaining backlog reveal the corresponding tradeoffs. A native desktop application supports reproducible scenarios, genuine live injections, smooth position interpolation and fair synchronized comparisons. All inputs, checkpoints and evaluation records are file-based and included with the project. Results demonstrate behavior in a small synthetic simulation, not real-world safety or general gridlock prevention.
 
-## 1 Problem statement and objectives
+
+### 1.2 Problem Identification
 
 The project addresses the conflict between predictable ordinary-traffic service and rapid ambulance passage at a signalized crossroads. A fixed cycle may leave an ambulance facing red despite an otherwise serviceable approach. Giving an ambulance priority can shorten its delay while making other approaches wait. An adaptive controller therefore needs information about both network demand and the emergency vehicle, together with a measurable definition of service quality.
 
 The central question is whether an emergency-aware learned policy can reduce ambulance impedance relative to a standard learned traffic controller under identical traffic and legal phase-transition constraints. Fixed-time and rule-based controllers provide interpretable reference points. The hybrid tests the distinct choice of using deterministic emergency priority together with a learned policy for ordinary traffic. It is not treated as a purely learned solution.
 
+### 1.3 Solution Proposed
+
+**Adaptive traffic service:** Formulate signal selection as a reinforcement learning problem using observed lane demand, queue age and phase duration.
+
+**Emergency awareness:** Include ambulance presence and proximity in the state and penalise red/yellow approach impedance, stopping and waiting.
+
+**Fair comparison:** Evaluate fixed-time, rule-based, standard DQN, emergency-aware DQN and hybrid control on identical held-out traffic inputs.
+
+**Reproducible simulation:** Include route manifests, trained checkpoints, configurations, raw evaluation records and verification commands.
+
+**Interactive demonstration:** Display actual SUMO positions using single or synchronized side-by-side playback, with genuine ambulance injections and clean lifecycle controls.
+
+### 1.4 Objectives and Scope
+
 The implementation objectives are to build a valid simulator interface, produce reproducible traffic inputs, train and reload actual policies, evaluate them on reserved scenarios, record ordinary-traffic costs and safety events, and expose the resulting behavior in a usable simulation. Submission includes code, a dataset, models, raw results, test evidence and this report. There is no database service; a file-based structure makes the complete evidence inspectable offline.
 
-## 2 Technical background
+The scope is a single four-way junction with synthetic traffic, a fixed evaluation horizon and a small set of trained seeds. The system is an academic simulation rather than a road-infrastructure deployment. No database server, private traffic feed or cloud inference service is required.
+
+### 1.5 Reinforcement Learning Background
 
 Reinforcement learning trains an agent through state observations, actions and rewards rather than through labeled correct actions. In this project the agent requests one of four movement groups at a single junction. Traffic evolves inside SUMO; the environment returns a new observation and reward after a decision interval. Deep Q-learning approximates the value of an action using a neural network. Experience replay and a separate target network reduce the instability associated with correlated observations and a moving training target [1].
 
@@ -30,7 +72,19 @@ SUMO-RL provides the Gymnasium-compatible environment and legal signal transitio
 
 Rule-based preemption is an essential comparator because ambulance priority has a simple, observable trigger: an emergency vehicle approaches a red movement. A learned policy should not be declared successful simply because it beats a fixed cycle. It should also be compared with this direct rule, while measuring how the rule affects regular traffic. The reported results preserve that distinction.
 
-## 3 System design and implementation
+### 1.6 Intended Use and Expected Benefits
+
+**Students and evaluators:** Inspect how traffic demand, controller choice and an approaching ambulance affect phase selection and delay.
+
+**Experimentation:** Reproduce trained-policy results and compare emergency service against ordinary-traffic costs under matching inputs.
+
+**Transparent demonstration:** View exact simulator states, pause or replay history and distinguish an injection request from physical vehicle insertion.
+
+## System Design and Dataset
+
+### 2.1 System Architecture
+
+Figure 1. Runtime data flow. Side-by-side operation sends identical traffic inputs to separate SUMO processes and presents their actual states using one playback clock.
 
 ![Figure 1. Runtime data flow. Side-by-side operation sends identical traffic inputs to separate SUMO processes and presents their actual states using one playback clock.](architecture.png)
 
@@ -54,11 +108,13 @@ libsumo has process-level simulation state, so a comparison runs one child proce
 
 The simulator network contains a single four-way junction with incoming approaches extended to approximately 389.6m. This places a complete 250m emergency detection window inside the network. Connections and signal links define the actual permitted turns. The canvas reads network lane geometry and real vehicle coordinates rather than placing illustrative markers on arbitrary paths.
 
-## 4 Dataset and experimental protocol
+### 2.2 Dataset and Traffic Generation
 
-The primary dataset contains 96 synthetic XML route files, not measured city traffic. Each background random seed generates two files: one without an ambulance and one with the same regular-vehicle schedule plus an ambulance. The two files share a simulator seed. Ambulance timing uses an independent random stream, so generating an emergency vehicle does not consume or change regular-traffic draws. This permits within-scenario normal/emergency comparisons under controlled inputs.
+The primary dataset contains 96 synthetic route files arranged as 48 normal/emergency pairs. Each background seed generates identical regular-vehicle schedules and simulator seeds for the paired cases. Ambulance timing uses an independent random stream, so adding an emergency vehicle does not change the regular-arrival draws. These are simulation inputs, not measured city traffic.
 
-| Partition | Background seeds | Pairs | Route files |
+Table 1. Primary dataset partition. Each pair contains the same regular traffic with and without an ambulance.
+
+| Partition | Background seeds | Pairs | Routes |
 
 | --- | --- | --- | --- |
 
@@ -70,19 +126,17 @@ The primary dataset contains 96 synthetic XML route files, not measured city tra
 
 | Total | Disjoint partitions | 48 | 96 |
 
-Table 1. Primary dataset partition. A pair contains the same regular arrivals with and without an ambulance.
+Low, medium and rush demand use Poisson rates of 0.055, 0.12 and 0.21 vehicles per second per approach. Patterns are symmetric, north/south-heavy or east/west-heavy. The heavy axis receives a 1.45 multiplier and the other axis 0.55, preserving total expected demand. Vehicles choose straight travel with probability 0.8 and each other destination with probability 0.1. Regular arrivals stop at 900s; episodes end at 1200s.
 
-Per-approach Poisson arrival rates are 0.055, 0.12 and 0.21 vehicles per second for low, medium and rush conditions. Directional patterns are symmetric, north/south-heavy or east/west-heavy. The heavy axis receives a 1.45 multiplier and the other axis 0.55, keeping total expected demand constant across these benchmark patterns. Vehicles choose straight movements with probability 0.8 and each other permitted destination with probability 0.1. Regular arrivals stop at 900s and all episodes continue to 1200s, leaving a 300s drain period.
+Requested ambulance departure is between 240s and 420s, with early and late timing windows. Each 12-pair block balances direction, demand and imbalance. It is not a full factorial: all four directions, three levels and three imbalances would require 36 combinations before replication. The compact design cannot identify every interaction.
 
-Ambulance requested departure lies between 240s and 420s, stratified into early and late windows. Direction, demand and imbalance have balanced coverage in each 12-pair block. This is a compact balanced design, not a full factorial: four directions, three demand levels and three imbalances would require 36 combinations before replication. The design therefore cannot identify every interaction or substitute for testing on different networks.
+Learner seeds 0, 1 and 2 are separate from traffic seeds, and train/validation/test inputs are disjoint. Final checkpoints use a fixed 40000-decision budget. Each validation and test split contains 24 routes times (2 deterministic policies + 3 policies times 3 model seeds), giving 264 episodes. The emergency-present results use 132 of these records.
 
-Training and evaluation seeds are disjoint. Models use learner seeds 0, 1 and 2, which are separate from traffic seeds. Checkpoints are selected at the fixed 40000-decision budget rather than by test performance. Each validation and test split runs both deterministic controllers once and each of the three seeded learned/hybrid controllers three times: 24 routes times (2 + 3 times 3) equals 264 episodes. The result table below restricts attention to ambulance-present cases, leaving 132 episode records.
+Manifests record configuration, vehicle count, split, seed, input path and SHA-256. DATASET.md also identifies supplementary integrity/regression fixtures. Interactive scenarios are stored separately and excluded from held-out statistics.
 
-Manifest files identify split, configuration, vehicle count, input path and SHA-256. The repository also retains an additional experiment fixture set used by integrity and regression checks; it is not pooled into the primary results reported here. DATASET.md identifies every included input and its purpose. Interactive configurations have separate storage and are excluded from the benchmark.
+## Learning Methodology
 
-## 5 Reinforcement learning formulation
-
-### State action and transition
+### 3.1 State action and transition
 
 The standard observation has 26 normalized features. The base 21 features encode the active phase, whether its minimum green time has elapsed, incoming-lane density and halting queues. Four additional features encode maximum regular-vehicle waiting age on each approach, capped and normalized at 120s. One feature encodes elapsed phase duration relative to the maximum-green limit. Queue age makes low-flow approaches visible even when their queues are short.
 
@@ -90,7 +144,7 @@ The emergency-aware observation adds eight features, producing 34 dimensions. Ea
 
 Decisions occur every 5 simulated seconds. Requests pass through a shared state machine with 3s yellow, 10s minimum green and a 60s maximum-green setting. A request does not instantly bypass an ongoing phase. These timing settings constrain every controller identically. Ambulances retain speedMode 31, and the project does not enable a bluelight device or red-light bypass.
 
-### Reward and training objective
+### 3.2 Reward and training objective
 
 The standard reward is the upstream difference in accumulated waiting-time reward, minus 0.15 times the sum of normalized maximum approach waits. The emergency-aware reward subtracts an additional penalty for each detected ambulance: 1.5 times (1 + proximity) when its movement is not green, plus 2 when stopped, plus 0.04 times its waiting time capped at 120s. The red/yellow approach penalty supplies a signal before the ambulance is fully stopped. These coefficients are design choices and are not established as globally optimal.
 
@@ -104,7 +158,9 @@ DQN nonterminal target = reward + gamma * max Q_target(next_state, action)
 
 DQN minimizes the discrepancy between its estimated action value and the target based on observed reward and the target network. Epsilon-greedy exploration allows phase choices beyond the current greedy estimate during training. Evaluation uses deterministic model prediction. Reward curves of standard and emergency policies cannot be compared as domain performance scores because their reward definitions differ; passage, traffic delay and backlog provide the common measures.
 
-## 6 Controllers and training configuration
+### 3.3 Controllers and Training Configuration
+
+Table 2. Evaluated policies. Rule-based priority embedded in the hybrid is explicitly part of that controller.
 
 | Controller | Decision rule |
 
@@ -120,7 +176,7 @@ DQN minimizes the discrepancy between its estimated action value and the target 
 
 | Hybrid Rule+DQN | Uses rule preemption within the detection window and the matched-seed standard DQN otherwise. No separate hybrid network is trained. |
 
-Table 2. Evaluated policies. Rule-based priority embedded in the hybrid is explicitly part of that controller.
+Table 3. Configuration recorded with each of the six primary checkpoints.
 
 | Parameter | Recorded value |
 
@@ -142,11 +198,37 @@ Table 2. Evaluated policies. Rule-based priority embedded in the hybrid is expli
 
 | Execution | CPU; one PyTorch training thread; deterministic evaluation |
 
-Table 3. Configuration recorded with each of the six primary checkpoints.
-
 The six primary models completed a total of 240000 decisions. Their recorded training times range from 75.66s to 82.43s, totaling 481.31 process-seconds. These are machine-specific recorded run timings, not a promise for a fresh machine. Every final checkpoint was reloaded and used for a valid prediction. Configuration files record observation schema, feature count, learner seed, input-manifest hash and library version to reject incompatible checkpoint/state combinations.
 
-## 7 Evaluation measures and statistical treatment
+### 3.4 Application Implementation
+
+The interface centers on a large junction view with compact telemetry below it. Single mode uses one policy; Side-by-side uses two independent workers synchronized on the same traffic. Controller switches are exclusive because the supported policies are distinct. When all switches are off, the interface explicitly labels standard DQN. Fixed-time, rule preemption and emergency-aware RL are selectable without implying a nonexistent combined policy.
+
+Traffic controls select low, medium or rush demand; any subset of heavy approaches; ambulance presence; and its origin. In interactive scenarios, each selected direction receives 45 percent more arrivals without reducing the other directions. None selected means balanced expected demand. The scheduled interactive ambulance requests departure at 300s. The traffic seed controls route generation and simulator randomness; the displayed learned policy uses checkpoint seed 0. Interactive traffic is not mixed with held-out benchmark statistics.
+
+The app advances actual SUMO states one second at a time and interpolates positions and shortest-angle heading changes between consecutive states. Signal changes, vehicle creation/removal and telemetry retain their true state boundaries. Pause freezes the current visual interpolation; resume continues from it. Seeking displays recorded history and pauses both views. It does not rewind or branch a running simulator, and it cannot seek into an uncomputed future.
+
+Live injection sends the same ambulance request to both workers at a shared boundary. The worker acknowledges a request before physical insertion; SUMO may delay insertion if a lane is occupied. The app reports active ambulances from the displayed actual state, avoiding an artificial emergency animation. Stop closes workers and waits asynchronously for cleanup, with termination as a bounded fallback. Restart waits for prior processes to retire, clears playback state and applies pending configuration changes.
+
+### 3.5 Simulation Workflow
+
+The application presents the same generated traffic in both views. Each controller runs in its own SUMO process and advances through a common time barrier. Vehicle colours, signal indicators and telemetry describe the actual displayed state.
+
+Figure 4. Actual application capture showing emergency-aware DQN and rule-based preemption at the same simulation time. This interactive demonstration is separate from the held-out evaluation.
+
+![Figure 4. Actual application capture showing emergency-aware DQN and rule-based preemption at the same simulation time. This interactive demonstration is separate from the held-out evaluation.](../../docs/images/simulation.png)
+
+Configure the traffic level, focused approaches, emergency vehicle and controller selections.
+
+Start the run, use the shared playback controls and inspect the live junction.
+
+Inject an ambulance at the live edge or pause and replay recorded states.
+
+Stop the workers cleanly, or restart to apply a new configuration.
+
+## Experimental Evaluation
+
+### 4.1 Evaluation Measures and Protocol
 
 **Ambulance passage** is the interval between first detection inside 250m and first observation on an outgoing road. It is neither total journey time nor requested-departure-to-clear time. The latter also includes insertion delay and travel before detection. Reporting both prevents a controller from appearing better simply because an ambulance entered the simulated network later.
 
@@ -158,7 +240,9 @@ Reported passage means pool the completed emergency episodes within a controller
 
 Matching background inputs enables controlled within-simulation comparisons, including emergency-minus-normal delay. The stochastic simulator can still diverge after interventions affect traffic interactions. Results describe this fixed scenario family. Different demand patterns, pedestrian traffic, sensor noise or a larger road network may change the ranking.
 
-## 8 Experimental results and analysis
+### 4.2 Held Out Results and Statistical Analysis
+
+Table 4. Ambulance-present test episodes only. Means and p95 describe the same fixed held-out route family; deterministic baselines have no learner-seed replication.
 
 | Controller | Runs | Mean (s) | Pooled p95 (s) | Scheduled to clear (s) |
 
@@ -174,13 +258,15 @@ Matching background inputs enables controlled within-simulation comparisons, inc
 
 | Hybrid Rule+DQN | 36 | 33.5 | 104.5 | 51.9 |
 
-Table 4. Ambulance-present test episodes only. Means and p95 describe the same fixed held-out route family; deterministic baselines have no learner-seed replication.
+Figure 2. Mean ambulance passage. Error bars for learned/hybrid policies show sample SD of three learner-seed means; the deterministic baselines have no learner-seed error bar.
 
 ![Figure 2. Mean ambulance passage. Error bars for learned/hybrid policies show sample SD of three learner-seed means; the deterministic baselines have no learner-seed error bar.](passage.png)
 
 Emergency-aware DQN achieves a mean passage of 41.4s versus 75.6s for standard DQN, a descriptive reduction of 45.2 percent on the same held-out traffic. Its pooled p95 is 105.2s versus 215.5s for standard DQN. This is consistent with the intended effect of adding emergency state and reward information, but the experiment changes both together and therefore does not isolate which component causes the difference.
 
 Rule preemption reaches 38.2s mean passage, slightly lower than emergency-aware DQN. The learned policy should therefore not be presented as the best ambulance-priority controller on mean passage. Hybrid reaches 33.5s, but its priority logic is explicitly rule-based; the learned component operates outside the detection window. Tail values also matter: all three emergency-priority methods have pooled p95 near 105-106s, far above their means.
+
+Table 5. Seed-level passage means, each averaged over the same 12 emergency routes.
 
 | Learned policy | Seed 0 mean (s) | Seed 1 mean (s) | Seed 2 mean (s) | Seed SD (s) |
 
@@ -192,9 +278,11 @@ Rule preemption reaches 38.2s mean passage, slightly lower than emergency-aware 
 
 | Hybrid Rule+DQN | 36.7 | 32.4 | 31.3 | 2.8 |
 
-Table 5. Seed-level passage means, each averaged over the same 12 emergency routes.
+Figure 3. Regular-vehicle stopped wait in the emergency-present test cases. These are equal-weight averages of episode means over inserted regular vehicles; uninserted demand is accounted for separately.
 
 ![Figure 3. Regular-vehicle stopped wait in the emergency-present test cases. These are equal-weight averages of episode means over inserted regular vehicles; uninserted demand is accounted for separately.](regular_wait.png)
+
+Table 6. Ordinary-traffic outcomes in ambulance-present episodes. Learned/hybrid count totals pool three model seeds; deterministic totals cover one run per route and must not be compared as equal-exposure event rates.
 
 | Controller | Stopped wait (s) | Congestion (s/request) | Unfinished | Uninserted |
 
@@ -210,27 +298,15 @@ Table 5. Seed-level passage means, each averaged over the same 12 emergency rout
 
 | Hybrid Rule+DQN | 36.6 | 45.2 | 431 | 0 |
 
-Table 6. Ordinary-traffic outcomes in ambulance-present episodes. Learned/hybrid count totals pool three model seeds; deterministic totals cover one run per route and must not be compared as equal-exposure event rates.
-
 Emergency-aware DQN averages 36.8s ordinary stopped wait, close to standard DQN at 35.9s and below rule preemption at 61.6s. This illustrates the intended tradeoff: the rule has a slightly better mean ambulance passage, while the learned traffic policies show lower average stopped delay for inserted ordinary vehicles. Means alone are insufficient because congested cases can leave vehicles pending or unfinished.
 
 Across all 264 test episodes, including normal cases, there are 4859 unfinished regular trips and 1416 scheduled regular vehicles that never enter before the horizon. There are no incomplete ambulance passages among the 132 emergency episodes. Recorded ambulance red crossings, collisions and teleports are all zero in this evaluation. These findings do not mean all demand was served or that gridlock is impossible. One rule-preemption queue-recovery episode is censored; the other controllers have no recovery censoring in their emergency test records.
 
 Mean post-clearance excess queue area over 120s is 1177.4 vehicle-seconds for fixed-time, 1089.9 for rule preemption, 697.4 for standard DQN, 533.3 for emergency-aware DQN and 707.4 for hybrid. This measure captures residual congestion after emergency clearance. Its ranking differs from mean passage, reinforcing the need to report more than one outcome.
 
-## 9 Simulation application and user workflow
+### 4.3 Implementation Difficulties and Resolutions
 
-The interface centers on a large junction view with compact telemetry below it. Single mode uses one policy; Side-by-side uses two independent workers synchronized on the same traffic. Controller switches are exclusive because the supported policies are distinct. When all switches are off, the interface explicitly labels standard DQN. Fixed-time, rule preemption and emergency-aware RL are selectable without implying a nonexistent combined policy.
-
-Traffic controls select low, medium or rush demand; any subset of heavy approaches; ambulance presence; and its origin. In interactive scenarios, each selected direction receives 45 percent more arrivals without reducing the other directions. None selected means balanced expected demand. The scheduled interactive ambulance requests departure at 300s. The traffic seed controls route generation and simulator randomness; the displayed learned policy uses checkpoint seed 0. Interactive traffic is not mixed with held-out benchmark statistics.
-
-The app advances actual SUMO states one second at a time and interpolates positions and shortest-angle heading changes between consecutive states. Signal changes, vehicle creation/removal and telemetry retain their true state boundaries. Pause freezes the current visual interpolation; resume continues from it. Seeking displays recorded history and pauses both views. It does not rewind or branch a running simulator, and it cannot seek into an uncomputed future.
-
-Live injection sends the same ambulance request to both workers at a shared boundary. The worker acknowledges a request before physical insertion; SUMO may delay insertion if a lane is occupied. The app reports active ambulances from the displayed actual state, avoiding an artificial emergency animation. Stop closes workers and waits asynchronously for cleanup, with termination as a bounded fallback. Restart waits for prior processes to retire, clears playback state and applies pending configuration changes.
-
-![Figure 4. Actual synchronized application capture. Vehicle coordinates, phase lamps and telemetry come from separate SUMO workers at the same time. This is an interactive demonstration rather than a held-out result plot.](../../docs/images/simulation.png)
-
-## 10 Implementation difficulties and resolutions
+Table 7. Engineering problems, implemented responses and observable checks. These are implementation decisions, not ablation results proving each individual performance contribution.
 
 | Problem encountered | Resolution and evidence |
 
@@ -250,11 +326,11 @@ Live injection sends the same ambulance request to both workers at a shared boun
 
 | Small windows and repeated runs could hide controls or leave work active | Reserved playback controls before the expandable viewport, added scrolling configuration, made headings responsive, tracked the UI timer and reaped child processes before restart. Desktop checks cover minimum size and startup cancellation. |
 
-Table 7. Engineering problems, implemented responses and observable checks. These are implementation decisions, not ablation results proving each individual performance contribution.
-
 A worker regression test initially used a 45s cold-start deadline while the application allowed 90s. Concurrent imports caused one intermediate timeout. The test was aligned with the app deadline and cancellation was distinguished from normal graceful exit. The final targeted rerun passed all 22 selected worker checks. Cold import time remains dependent on machine load; cancellation keeps the UI responsive during startup.
 
-## 11 Verification reproducibility and storage
+### 4.4 Verification and Reproducibility
+
+Table 8. Verification scopes overlap; counts are separate recorded runs and should not be added as independent experiments. Primary experiment performance comes from the 264 held-out episodes, not UI tests.
 
 | Verification | Recorded result |
 
@@ -272,8 +348,6 @@ A worker regression test initially used a 45s cold-start deadline while the appl
 
 | Offline replay | Two archived policies reproduced their recorded metrics with external connections blocked |
 
-Table 8. Verification scopes overlap; counts are separate recorded runs and should not be added as independent experiments. Primary experiment performance comes from the 264 held-out episodes, not UI tests.
-
 A file-based repository supports offline inspection. The primary dataset is under experiments/v2/main/data; trained models and run configurations are under its models directory; validation and test CSV/JSON records are under results/evaluation. Manifest and checkpoint hashes connect the evaluated runs to exact inputs and policies. No SQLite, SQL, MongoDB or other database is used. Generated interactive routes and recordings are kept separate from the versioned benchmark inputs.
 
 The installed project was tested on Windows x64 with Python 3.12, SUMO/libsumo 1.28.0, Stable-Baselines3 2.9.2, PyTorch 2.14.1+cpu and the pinned dependency set. The application is native Tk, so browser testing does not apply. Internet is needed to install dependencies; installed simulation and inference run offline. A full dependency installation on every supported operating system is not claimed. A Windows CI workflow template is included for activation in GitHub Actions. Its presence does not establish a successful remote CI run; the README explains activation.
@@ -289,7 +363,7 @@ python validate_ui.py --screenshots
 
 The first installation command is wrapped for printing; enter it as one line. Supplied checkpoints run without retraining. For new experiments, training supports a separate output group and evaluation supports a separate output root. The contribution guide documents these options so an evaluator need not overwrite supplied evidence. The report builder independently recomputes its numeric evidence before generating the PDF and editable Markdown source.
 
-## 12 Limitations conclusions and further work
+### 4.5 Limitations and Further Work
 
 The experiment uses one synthetic four-way network, Poisson demand, limited directional patterns and three learner seeds. It omits pedestrians, coordinated junctions, realistic emergency dispatch, noisy sensing and changing road geometry. The compact balanced design does not cover every interaction among direction, intensity and imbalance. Hyperparameter/reward ablations and independent network replication are needed before assigning performance changes to an individual feature or generalizing the controller ranking.
 
@@ -298,6 +372,16 @@ The finite horizon creates unfinished and uninserted ordinary trips. Their count
 The project demonstrates a measurable emergency-aware learned policy with lower mean ambulance passage than standard DQN on controlled held-out traffic, alongside lower ordinary stopped delay than the direct preemption rule. The rule still has the lower mean ambulance passage of those two policies, and the hybrid achieves the best mean passage in this sample with its explicit rule component. This supports a practical comparison of priority and ordinary-traffic service rather than a claim that learning dominates every baseline.
 
 Further work should test independent networks and non-Poisson demand, add explicit pedestrian and transit constraints, validate multiple ambulances with per-vehicle metrics, compare additional RL algorithms under equal budgets, perform feature/reward ablations, and expand seed replication. Those are proposed extensions, not completed capabilities of this submission.
+
+## Reflections
+
+Working on Adaptive Crossroads Control with Emergency Vehicle Priority connected reinforcement learning theory with the practical demands of a complete simulation system. Designing the observation and reward made the control objective concrete: short queues do not always mean fair service, and an ambulance can be impeded before it comes to a complete stop. These considerations motivated explicit waiting-age and emergency-proximity information rather than relying only on total traffic load.
+
+An important lesson was that a learned controller must be assessed against strong and understandable alternatives. Emergency-aware DQN reduced mean ambulance passage relative to standard DQN in the held-out scenarios, while rule-based preemption retained a slightly lower passage mean. The learned policies also showed lower ordinary stopped wait than the rule. Reporting this tradeoff was more informative than presenting one favourable score as a universal improvement.
+
+The implementation also demonstrated why experimental integrity and interface behaviour must be considered together. Matching traffic seeds is not sufficient if two displays drift in time, and acknowledging an injection is not the same as observing the ambulance in the network. Separate simulation workers, state barriers, immutable recordings and explicit request/active counts made these distinctions observable. Smooth playback improved the presentation while preserving actual simulator endpoints and event ordering.
+
+The final outcome is a working academic project with an inspectable dataset, trained models, a simulation application and reproducible results. The project strengthened my understanding of deep Q-learning, controlled evaluation, finite-horizon metrics and software verification. It also made the limits clear: synthetic single-junction evidence and zero observed simulator safety events do not establish real-world safety or guarantee gridlock prevention. Further experiments on independent networks and more diverse traffic remain necessary.
 
 ## References
 
